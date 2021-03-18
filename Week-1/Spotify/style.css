@@ -135,7 +135,7 @@ a:hover {
 
 #section2 {
   /* background-color: #f1948a; */
-  background: url(/Spotify/images/headphone.jpeg);
+  background: url(images/LiE_circles.svg);
   background-size: auto;
   /* opacity: 0.5; */
   padding: 120px 0;
@@ -223,7 +223,7 @@ a:hover {
 
 #section3 {
   padding-top: 80px;
-  background-image: url(/Spotify/images/LiE_circles.svg);
+  background-image: url(images/LiE_circles.svg);
   background-size: auto 100%;
   color: gold;
   background-color: #191919;
