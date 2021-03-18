@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Exercises</title>
+  </head>
+  <body>
+    <section id="assignment-1">
+      <h2>Assignment 1 - HTML comment</h2>
+      <p>Comment the second paragraph of the following HTML document</p>
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;h3&gt;In this course we'll learn:&lt;/h3&gt; 
+          &lt;p&gt;HTML &amp; CSS&lt;/p&gt; 
+          &lt;!-- &lt;p&gt;Python&lt;/p&gt; --&gt; 
+          &lt;p&gt;Javascript&lt;/p&gt;
+        </code>
+      </pre>
+
+      <h3>In this course we'll learn:</h3>
+      <p>HTML & CSS</p>
+      <!-- <p>Python</p> -->
+      <p>Javascript</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 2 - Hyperlink 1</h2>
+      <p>Create a hyperlink that leads to www.coderschool.vn</p>
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;p&gt;Go to &lt;a href=&quot;https://www.coderschool.vn/vi/&quot; target=&quot;_blank&quot;&gt;CoderSchool&lt;/a&gt;&lt;/p&gt;
+        </code>
+      </pre>
+
+      <p>
+        Go to
+        <a href="https://www.coderschool.vn/vi/" target="_blank">CoderSchool</a>
+      </p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 3 - Hyperlink 2</h2>
+      <p>
+        Create a hyperlink to take you to another part of the same HTML document
+      </p>
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;p&gt;Go to &lt;a href=&quot;#batman-who-laughs&quot;&gt;Assignment 8&lt;/a&gt;&lt;/p&gt;
+        </code>
+      </pre>
+
+      <p>
+        Go to
+        <a href="#batman-who-laughs">Assignment 8</a>
+      </p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 4 - Hyperlink 3</h2>
+      <p>
+        Create a hyperlink that opens the linked document in a separate browser
+        tab
+      </p>
+      <p>Solution:</p>
+      <pre>
+        <code>
+        &lt;p&gt;Go to &lt;a href=&quot;linked.html&quot; target=&quot;_blank&quot;&gt;Tada&lt;/a&gt;&lt;/p&gt;
+        </code>
+      </pre>
+
+      <p>
+        Go to
+        <a href="linked.html" target="_blank">Tada</a>
+      </p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 5 - Article</h2>
+      <p>
+        Create an article element that has a title and a paragraph (HTML5
+        article element represents independent item like a blog entry in an web
+        document).
+      </p>
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;article&gt;
+            &lt;h3&gt;Lorem ipsum&lt;/h3&gt;
+            &lt;p&gt;
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+              when an unknown printer took a galley of type and scrambled it to make a type 
+              specimen book.
+            &lt;/p&gt;
+          &lt;/article&gt;
+        </code>
+      </pre>
+
+      <article>
+        <h3>Lorem ipsum</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+      </article>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 6 - Audio</h2>
+      <p>
+        Embed an audio clip into a web page (Ref:
+        https://htmlreference.io/element/audio/)
+      </p>
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;audio src=&quot;Hal.mp3&quot; type=&quot;audio/mp3&quot; controls&gt;
+            Your browser does not support the audio tag.
+          &lt;/audio&gt;
+        </code>
+      </pre>
+
+      <audio src="Hal.mp3" type="audio/mp3" controls>
+        Your browser does not support the audio tag.
+      </audio>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 7 - Video</h2>
+      <p>Embed an video clip into a web page.</p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;iframe 
+            width=&quot;939&quot;
+            height=&quot;704&quot;
+            src=&quot;https://www.youtube.com/embed/Ool4gyrJpM0&quot;
+            frameborder=&quot;0&quot;
+            allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;
+            allowfullscreen
+          &gt;&lt;/iframe&gt;
+        </code>
+      </pre>
+
+      <iframe
+        width="939"
+        height="704"
+        src="https://www.youtube.com/embed/Ool4gyrJpM0"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <hr />
+
+    <section id="batman-who-laughs">
+      <h2>Assignment 8 - Image</h2>
+      <p>Create an image with these attributes:</p>
+      <ul>
+        <li>An alternate text</li>
+        <li>The size of the image is 250 pixels wide and 400 pixels tall.</li>
+      </ul>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;img 
+            src=&quot;https://static.comicvine.com/uploads/original/11128/111289540/6428320-batman%20who%20laughs.jpg&quot; 
+            alt=&quot;The Batman Who Laughs&quot; 
+            width=&quot;250px&quot; 
+            height=&quot;400px&quot; 
+          /&gt;
+        </code>
+      </pre>
+
+      <img
+        src="https://static.comicvine.com/uploads/original/11128/111289540/6428320-batman%20who%20laughs.jpg"
+        alt="The Batman Who Laughs"
+        width="250px"
+        height="400px"
+      />
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 9 - Bold text</h2>
+      <p>How to write bold text using HTML tags?</p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;p&gt;The &lt;strong&gt;strong&lt;/strong&gt; man is &lt;b&gt;strongest&lt;/b&gt; when alone&lt;/p&gt;
+        </code>
+      </pre>
+
+      <p>The <strong>strong</strong> man is <b>strongest</b> when alone</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 10 - Underline text</h2>
+      <p>How to underline a text in a HTML document?</p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;p&gt;You are &lt;u&gt;under arrest&lt;/u&gt;&lt;/p&gt;
+        </code>
+      </pre>
+
+      <p>You are <u>under arrest</u></p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 11 - Strikeout</h2>
+      <p>Add a line through a word in a paragraph.</p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;p&gt;&lt;strike&gt;Delete this&lt;/strike&gt;&lt;/p&gt;
+        </code>
+      </pre>
+
+      <p><strike>Delete this</strike></p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 12 - Line break</h2>
+      <p>Add a line break in middle of a paragraph.</p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;p&gt; 
+            It has survived not only five centuries, but also the leap into 
+            electronic typesetting, remaining essentially unchanged. &lt;br /&gt; 
+            It was popularised in the 1960s with the release of Letraset sheets 
+            containing Lorem Ipsum passages, &lt;br /&gt; 
+            and more recently with desktop publishing software like Aldus PageMaker 
+            including versions of Lorem Ipsum. 
+          &lt;/p&gt;
+        </code>
+      </pre>
+
+      <p>
+        It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. <br />
+        It was popularised in the 1960s with the release of Letraset sheets
+        containing Lorem Ipsum passages, <br />
+        and more recently with desktop publishing software like Aldus PageMaker
+        including versions of Lorem Ipsum.
+      </p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 13 - Horizontal line</h2>
+      <p>Add a horizontal line between two paragraphs.</p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>       
+          &lt;p&gt;
+            Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. Lorem Ipsum has been the industry's standard dummy text 
+          &lt;/p&gt; 
+          &lt;hr /&gt; 
+          &lt;p&gt; 
+            ever since the 1500s, when an unknown printer took a galley of type and 
+            scrambled it to make a type specimen book.
+          &lt;/p&gt;
+        </code>
+      </pre>
+
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text
+      </p>
+      <hr />
+      <p>
+        ever since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 14 - Unordered List</h2>
+      <p>Create an unordered list with three items.</p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;ul&gt;
+            &lt;li&gt;Sharingan&lt;/li&gt;
+            &lt;li&gt;Byakugan&lt;/li&gt;
+            &lt;li&gt;Rinnegan&lt;/li&gt;
+          &lt;/ul&gt;
+        </code>
+      </pre>
+
+      <ul>
+        <li>Sharingan</li>
+        <li>Byakugan</li>
+        <li>Rinnegan</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 15 - Ordered List</h2>
+      <p>
+        Create three ordered lists that use numbers/uppercase ABC/roman numbers
+        for the item. Each has 2 items.
+      </p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;ol type=&quot;1&quot;&gt;
+            &lt;li&gt;Deva Path&lt;/li&gt; 
+            &lt;li&gt;Asura Path&lt;/li&gt; 
+          &lt;/ol&gt; 
+          &lt;ol type=&quot;A&quot;&gt; 
+            &lt;li&gt;Human Path&lt;/li&gt; 
+            &lt;li&gt;Animal Path&lt;/li&gt; 
+          &lt;/ol&gt; 
+          &lt;ol type=&quot;I&quot;&gt; 
+            &lt;li&gt;Preta Path&lt;/li&gt; 
+            &lt;li&gt;Naraka Path&lt;/li&gt; 
+          &lt;/ol&gt;
+        </code>
+      </pre>
+
+      <ol type="1">
+        <li>Deva Path</li>
+        <li>Asura Path</li>
+      </ol>
+      <ol type="A">
+        <li>Human Path</li>
+        <li>Animal Path</li>
+      </ol>
+      <ol type="I">
+        <li>Preta Path</li>
+        <li>Naraka Path</li>
+      </ol>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 16 - Definition list</h2>
+      <p>
+        Create a definition list with two items. Each item has a description.
+      </p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;dl&gt; 
+            &lt;dt&gt;Coffee&lt;/dt&gt; 
+            &lt;dd&gt;Black hot drink&lt;/dd&gt; 
+            &lt;dt&gt;Milk&lt;/dt&gt; 
+            &lt;dd&gt;White cold drink&lt;/dd&gt;
+          &lt;/dl&gt;
+        </code>
+      </pre>
+
+      <dl>
+        <dt>Coffee</dt>
+        <dd>Black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>White cold drink</dd>
+      </dl>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 17 - Button</h2>
+      <p>
+        Create a button that pop up a window says "Hi friend!" when click on it.
+        Hint: onclick, alert().
+      </p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;button onclick=&quot;alert('Hi friends!')&quot;&gt;Say Hi&lt;/button&gt;
+        </code>
+      </pre>
+
+      <button onclick="alert('Hi friends!')">Say Hi</button>
+
+      <button onclick="console.log('Hi friends!')">Say Hi in console</button>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 18 - Table</h2>
+      <p>Create a table with two rows, three columns, and headers.</p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;table border=&quot;1&quot;&gt; 
+            &lt;thead&gt; 
+              &lt;tr&gt; 
+                &lt;th&gt;Person&lt;/th&gt; 
+                &lt;th&gt;Month&lt;/th&gt; 
+                &lt;th&gt;Year&lt;/th&gt; 
+              &lt;/tr&gt; 
+            &lt;/thead&gt; 
+            &lt;tbody&gt; 
+              &lt;tr&gt; 
+                &lt;td&gt;Anne&lt;/td&gt; 
+                &lt;td&gt;February&lt;/td&gt; 
+                &lt;td&gt;2002&lt;/td&gt;
+              &lt;/tr&gt; 
+              &lt;tr&gt; 
+                &lt;td&gt;Chris&lt;/td&gt; 
+                &lt;td&gt;July&lt;/td&gt; 
+                &lt;td&gt;1998&lt;/td&gt; 
+              &lt;/tr&gt; 
+            &lt;/tbody&gt; 
+          &lt;/table&gt;
+        </code>
+      </pre>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Person</th>
+            <th>Month</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anne</td>
+            <td>February</td>
+            <td>2002</td>
+          </tr>
+          <tr>
+            <td>Chris</td>
+            <td>July</td>
+            <td>1998</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 19 - Navigation Links</h2>
+      <p>How to define a section with navigation links.</p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;nav&gt; 
+            &lt;a href=&quot;https://en.wikipedia.org/wiki/C%2B%2B&quot;&gt;C++&lt;/a&gt; | 
+            &lt;a href=&quot;https://en.wikipedia.org/wiki/JavaScript&quot;&gt;JavaScript&lt;/a&gt; | 
+            &lt;a href=&quot;https://en.wikipedia.org/wiki/Java_(programming_language)&quot; 
+              &gt;Java&lt;/a 
+            &gt; 
+            | 
+            &lt;a href=&quot;https://en.wikipedia.org/wiki/Python_(programming_language)&quot; 
+              &gt;Python&lt;/a 
+              &gt; 
+          &lt;/nav&gt;
+        </code>
+      </pre>
+
+      <nav>
+        <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> |
+        <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> |
+        <a href="https://en.wikipedia.org/wiki/Java_(programming_language)"
+          >Java</a
+        >
+        |
+        <a href="https://en.wikipedia.org/wiki/Python_(programming_language)"
+          >Python</a
+        >
+      </nav>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 20 - Toggable Detail</h2>
+      <p>
+        Create a button that pop up a window says "Hi friend!" when click on it.
+        Hint: onclick, alert().
+      </p>
+
+      <p>Solution:</p>
+      <pre>
+        <code>
+          &lt;details&gt; 
+            &lt;summary&gt;What is airliner?&lt;/summary&gt; 
+            &lt;p&gt;A type of aircraft for transporting passengers and air cargo.&lt;/p&gt; 
+          &lt;/details&gt;
+        </code>
+      </pre>
+
+      <details>
+        <summary>What is airliner?</summary>
+        <p>A type of aircraft for transporting passengers and air cargo.</p>
+      </details>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Assignment 21 - Form</h2>
+      <p>Create a form that asks for:</p>
+      <ul>
+        <li>
+          Email, password and confirm password. Each of the field has a
+          arcording placeholder.
+        </li>
+        <li>Title (Radio box), 2 options: Developer or Employer</li>
+        <li>
+          Interested in (Checkbox), 3 options: ReactJS, NodeJS, Web Design
+        </li>
+        <li>City (Select box), 3 options: Hanoi, HCMC, Da Nang</li>
+        <li>Short Bio (Text area)</li>
+        <li>A confirm button which is disabled.</li>
+      </ul>
+
+      <p>Solution:</p>
+
+      <form action="">
+        <h4>Registration</h4>
+
+        <fieldset>
+          <legend>Account</legend>
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@mail.com"
+          /><br /><br />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="At least 7 characters"
+          /><br /><br />
+
+          <label for="confirm-pass">Confirm Password</label>
+          <input
+            type="password"
+            id="confirm-pass"
+            name="password"
+            placeholder="At least 7 characters"
+          /><br /><br />
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+          <legend>You are:</legend>
+
+          <input type="radio" name="title" id="developer" value="developer" />
+          <label for="developer">Developer</label><br />
+
+          <input type="radio" name="title" id="employer" value="employer" />
+          <label for="employer">Employer</label><br />
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+          <legend>You are interested in:</legend>
+
+          <input
+            type="checkbox"
+            name="technology"
+            id="reactjs"
+            value="reactjs"
+          />
+          <label for="reactjs">ReactJS</label><br />
+
+          <input type="checkbox" name="technology" id="nodejs" value="nodejs" />
+          <label for="nodejs">NodeJS</label><br />
+
+          <input
+            type="checkbox"
+            name="technology"
+            id="web-design"
+            value="web-design"
+          />
+          <label for="web-design">Web Design</label><br />
+        </fieldset>
+
+        <br />
+
+        <label for="cities">City where you're living in:</label>
+        <select name="city" id="cities">
+          <option value="hanoi">Hanoi</option>
+          <option value="hcmc">Ho Chi Minh City</option>
+          <option value="danang">Da Nang</option>
+        </select>
+
+        <br />
+        <br />
+
+        <label for="bio">Short bio</label><br />
+        <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+
+        <br />
+
+        <button disabled>Submit</button>
+      </form>
+    </section>
+  </body>
+</html>

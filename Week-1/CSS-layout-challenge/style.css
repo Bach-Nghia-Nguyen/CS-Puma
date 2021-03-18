@@ -1,0 +1,377 @@
+:root {
+  box-sizing: border-box;
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 30px 20vw;
+}
+
+section {
+  border: 1px solid black;
+  border-radius: 15px 15px 0 0;
+  height: 600px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: white;
+}
+
+section h1 {
+  font-size: 1em;
+  padding: 10px;
+  margin: 0;
+}
+
+section .header-bar {
+  background-color: grey;
+  /* margin-top: 4px; */
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+section .circle {
+  width: 1em;
+  height: 1em;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin-left: 0.8em;
+}
+
+section .circle-red {
+  background-color: #e13f3e;
+}
+
+section .circle-yellow {
+  background-color: #f4b136;
+}
+
+section .circle-green {
+  background-color: #49b22b;
+}
+
+.black {
+  background-color: black;
+}
+
+.grey {
+  background-color: #2c2c2d;
+  /* background-color: brown; */
+}
+
+.bright {
+  background-color: #97999c;
+}
+
+/* Challenge 1 */
+#challenge1 .screen {
+  display: flex;
+  justify-content: space-between;
+}
+
+#challenge1 .right-side {
+  display: flex;
+}
+
+#challenge1 .div1,
+#challenge1 .div2,
+#challenge1 .div3 {
+  width: 150px;
+  height: 150px;
+}
+
+#challenge1 .div3 {
+  margin-left: 10px;
+}
+
+/* Challenge 2 */
+
+#challenge2 .inner-div-1,
+#challenge2 .inner-div-2,
+#challenge2 .inner-div-3 {
+  display: flex;
+}
+
+#challenge2 .div1,
+#challenge2 .div2,
+#challenge2 .div3 {
+  width: 100px;
+  height: 100px;
+}
+
+#challenge2 .inner-div-2 {
+  justify-content: center;
+}
+
+#challenge2 .inner-div-3 {
+  justify-content: flex-end;
+}
+
+/* Challenge 3 */
+
+#challenge3 .screen {
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#challenge3 .div1 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#challenge3 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#challenge3 .div2 {
+  width: 90px;
+  height: 90px;
+}
+
+/* Challenge 4 */
+
+#challenge4 .div1,
+#challenge4 .div2 {
+  width: 150px;
+  height: 150px;
+}
+
+#challenge4 .screen {
+  position: relative;
+}
+
+#challenge4 .div2 {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+}
+
+/* Challenge 5 */
+
+#challenge5 .inner-div-1,
+#challenge5 .inner-div-2,
+#challenge5 .inner-div-3 {
+  display: flex;
+}
+
+#challenge5 .div1,
+#challenge5 .div2,
+#challenge5 .div3 {
+  width: 100px;
+  height: 100px;
+}
+
+#challenge5 .inner-div-2 {
+  justify-content: center;
+}
+
+#challenge5 .inner-div-1 {
+  justify-content: flex-end;
+}
+
+/* Challenge 6 */
+
+#challenge6 .screen {
+  height: 360px;
+  position: relative;
+}
+
+#challenge6 .div1 {
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+
+  width: 380px;
+  height: 200px;
+}
+
+#challenge6 .div2 {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  bottom: 0;
+}
+
+#challenge6 .div3 {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: 0;
+  right: 0;
+}
+
+/* Challenge 7 */
+
+#challenge7 .div1 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+}
+
+#challenge7 .div2 {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Challenge 8 */
+
+#challenge8 .div1 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+}
+
+#challenge8 .div2 {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Challenge 9 */
+
+#challenge9 .div1 {
+  width: 260px;
+  height: 380px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#challenge9 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#challenge9 .div2,
+#challenge9 .div3 {
+  width: 140px;
+  height: 140px;
+}
+
+/* Challenge 10 */
+
+#challenge10 .div1 {
+  margin: auto;
+  margin-top: 40px;
+  width: 560px;
+  height: 260px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#challenge10 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#challenge10 .div2,
+#challenge10 .div3 {
+  width: 180px;
+  height: 180px;
+}
+
+#challenge10 .div2 {
+  margin-right: 50px;
+}
+
+/* Challenge 11 */
+
+#challenge11 .div1 {
+  width: 260px;
+  height: 480px;
+  position: relative;
+}
+
+#challenge11 .div2,
+#challenge11 .div3 {
+  position: absolute;
+}
+
+#challenge11 .div2 {
+  width: 215px;
+  height: 260px;
+  right: 0;
+  bottom: 0;
+}
+
+#challenge11 .div3 {
+  width: 170px;
+  height: 170px;
+  right: 12px;
+  bottom: 12px;
+}
+
+/* Challenge 12 */
+
+#challenge12 .div1 {
+  width: 260px;
+  height: 480px;
+  position: relative;
+}
+
+#challenge12 .div2,
+#challenge12 .div3 {
+  position: absolute;
+}
+
+#challenge12 .div2 {
+  width: 215px;
+  height: 260px;
+  right: -105px;
+  bottom: 0;
+}
+
+#challenge12 .div3 {
+  width: 170px;
+  height: 170px;
+  right: 0;
+  bottom: -75px;
+}
+
+/* Challenge 13 */
+
+#challenge13 .div1,
+#challenge13 .div2,
+#challenge13 .div3,
+#challenge13 .div4,
+#challenge13 .div5 {
+  width: 120px;
+  height: 120px;
+}
+
+#challenge13 .absolute {
+  position: absolute;
+}
+
+#challenge13 .relative {
+  position: relative;
+  left: 54px;
+  top: 32px;
+}

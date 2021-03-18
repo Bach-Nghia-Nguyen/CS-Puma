@@ -1,0 +1,108 @@
+/* Assignment 1 style */
+#assignment1 {
+  background-color: #fff;
+  background-image: linear-gradient(
+      90deg,
+      transparent 79px,
+      #abced4 79px,
+      #abced4 81px,
+      transparent 81px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+}
+
+#assignment1 p {
+  color: #2c3e50;
+  font: italic 20px Verdana;
+}
+
+#assignment1 p::first-letter {
+  font-size: 2em;
+  color: #27ae60;
+}
+
+#assignment1 #para1 {
+  color: #2ecc71;
+}
+
+#assignment1 .header {
+  color: #e67e22;
+}
+
+#assignment1 h1 {
+  background-color: linen;
+  /* font-family: Verdana, sans-serif; */
+  /* font-size: 200%; */
+  /* font-weight: 200; */
+}
+#assignment1 h1:first-child {
+  visibility: hidden;
+  /* display: none; */
+}
+
+#assignment1 #assignment1-content {
+  margin: 0 20%;
+}
+
+/* Assignment 2 style */
+.assignment2-jump {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.assignment2-jump:link {
+  color: darkcyan;
+}
+
+.assignment2-jump:visited {
+  color: purple;
+}
+
+.assignment2-jump:hover {
+  text-decoration: underline;
+  color: salmon;
+}
+.assignment2-jump:active {
+  color: firebrick;
+}
+
+/* Assignment 3 style */
+#assignment3 {
+  font-size: 40px;
+}
+
+#assignment3 li {
+  font-size: 0.8em;
+}
+
+/* Assignment 4 style */
+#assignment4 {
+  background-color: #40739e;
+  width: 80vmin;
+  height: 80vmin;
+}
+
+/* Assignment 5 style */
+#assignment5 .box {
+  border: solid 50px #e74c3c;
+  padding: 50px;
+  text-transform: uppercase;
+  width: 50%;
+  overflow-x: scroll;
+}
+
+root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+#assignment5 #content {
+  box-sizing: border-box;
+  border: solid 50px green;
+}
