@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/trello-logo.png"
+      type="image/x-icon"
+    />
+    <title>Trello</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar starts -->
+    <header>
+      <nav id="navbar">
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <input id="search" placeholder="Search..." autocomplete="off" />
+        <h1 id="app-title">Mini Trello</h1>
+      </nav>
+    </header>
+    <!-- Navigation bar ends -->
+
+    <!-- <div>
+      <select name="status" class="task-status-select">
+        <option value="backlog">Backlog</option>
+        <option value="in-progress">In Progress</option>
+        <option value="review">Review</option>
+        <option value="done">Done</option>
+      </select>
+      <button id="confirm-status">Confirm</button>
+    </div> -->
+
+    <main id="app">
+      <section id="board">
+        <div id="infos">
+          <div class="logo">
+            <img src="images/trello-logo.png" alt="Trello Logo" />
+          </div>
+          <div id="infos-content">
+            <div class="infos-title">Mini Trello</div>
+            <div class="infos-description">This is trial</div>
+          </div>
+        </div>
+
+        <div id="add-task-form">
+          <input id="task-value" placeholder="Add task" />
+          <button id="add-task">+</button>
+        </div>
+      </section>
+
+      <section id="columns">
+        <div class="column dropzone">
+          <h3 class="column-title">Backlog</h3>
+          <ul class="tasks" id="tasks-added">
+            <!-- <li class="task fill" draggable="true" >
+              <p class="task-content">Write the weekly note</p>
+              <div class="trash">&times;</div>
+              <div class="edit-btn"">Edit</div>
+            </li> -->
+          </ul>
+        </div>
+
+        <div class="column dropzone">
+          <h3 class="column-title">In Progress</h3>
+          <ul class="tasks" id="in-progress"></ul>
+        </div>
+
+        <div class="column dropzone">
+          <h3 class="column-title">Review</h3>
+          <ul class="tasks" id="review"></ul>
+        </div>
+
+        <div class="column dropzone">
+          <h3 class="column-title">Done</h3>
+          <ul class="tasks" id="done"></ul>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

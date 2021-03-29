@@ -1,0 +1,17 @@
+body {
+  min-height: 100vh;
+}
+
+/* #change-color p {
+  display: inline-block;
+  background-color: white;
+  margin: auto;
+  padding: 0 8px 0;
+  line-height: 22px;
+} */
+
+.footer {
+  background-color: pink;
+  padding: 15px 0 15px;
+  margin-top: 40px;
+}
