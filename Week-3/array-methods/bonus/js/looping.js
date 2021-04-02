@@ -637,13 +637,33 @@ const findMostFavoritedColor = (persons = people) => {
       colorCounts[known].count++;
     }
   });
-  console.log(colorCounts);
 
-  console.log(
-    colorCounts.reduce((color1, color2) => {
-      return color1.count - color2.count;
-    })
-  );
+  let theMost = Math.max(...colorCounts.map(({ count }) => count));
+  let mostPopularColors = colorCounts
+    .filter((color) => color.count === theMost)
+    .map(({ name }) => name);
+
+  let result = mostPopularColors.reduce((string, color, index) => {
+    if (mostPopularColors.length == 1) {
+      return string + color + " was really popular!";
+    } else if (mostPopularColors.length == 2) {
+      if (index == 0) {
+        return string + color + " ";
+      } else if (index == 1) {
+        return string + "and " + color + " were really popular!";
+      }
+    } else if (mostPopularColors.length > 2) {
+      if (index < mostPopularColors.length - 2) {
+        return string + color + ", ";
+      } else if (index == mostPopularColors.length - 2) {
+        return string + color;
+      } else {
+        return string + " and " + color + " were really popular!";
+      }
+    }
+  }, "");
+
+  document.getElementById("findMostFavoritedColor").innerHTML = result;
 };
 
 function onFindMostFavoritedColor() {
