@@ -24,7 +24,8 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-ul {
+ul,
+dl {
   color: #faf3dd;
 }
 
@@ -50,7 +51,8 @@ button {
   background-color: #aed9e0;
 }
 
-ul {
+ul,
+dl {
   font-size: 2em;
 }
 

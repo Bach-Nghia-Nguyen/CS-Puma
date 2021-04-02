@@ -1,56 +1,210 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-  <meta charset="utf-8">
+    <title>JS Duy Hung Exercises</title>
+    <meta name="description" content="JS Exercises" />
+    <meta name="author" content="SitePoint" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
 
-  <title>JS Duy Hung Exercises</title>
-  <meta name="description" content="JS Exercises">
-  <meta name="author" content="SitePoint">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-  <div class="header">
-    <h1 class="header-title">
-      <i class="fa fa-list-ol" style="font-size: 0.8em"></i> Js Exercises <i class="fa fa-clipboard"
-        style="font-size: 0.8em"></i>
-    </h1>
-  </div>
-
-  <div class="container">
-    <div class="card">
-      <h1 class="card-title">1. getAmericans()</h1>
-      <hr>
-      <button onclick="onGetAmericans()">Show Americans</button>
-      <ul id="getAmericans">
-      </ul>
+  <body>
+    <div class="header">
+      <h1 class="header-title">
+        <i class="fa fa-list-ol" style="font-size: 0.8em"></i> Js Exercises
+        <i class="fa fa-clipboard" style="font-size: 0.8em"></i>
+      </h1>
     </div>
 
-    <div class="card">
-      <h1 class="card-title">2. getCoderSchoolStaff()</h1>
-      <hr>
-      <button onclick="onGetCoderSchoolStaff()">Show Coderschool staff</button>
-      <ul id="getCoderSchoolStaff">
-      </ul>
+    <!-- 1 -->
+    <div class="container">
+      <div class="card">
+        <h1 class="card-title">1. getAmericans()</h1>
+        <hr />
+        <button onclick="onGetAmericans()">Show Americans</button>
+        <ul id="getAmericans"></ul>
+      </div>
+
+      <!-- 2 -->
+      <div class="card">
+        <h1 class="card-title">2. getCoderSchoolStaff()</h1>
+        <hr />
+        <button onclick="onGetCoderSchoolStaff()">
+          Show Coderschool staff
+        </button>
+        <ul id="getCoderSchoolStaff"></ul>
+      </div>
+
+      <!-- 3 -->
+      <div class="card">
+        <h1 class="card-title">3. getMostPopularPerson()</h1>
+        <hr />
+        <button onclick="onGetMostPopularPerson()">
+          Show most popular person
+        </button>
+        <ul id="getMostPopularPerson"></ul>
+      </div>
+
+      <!-- 4 -->
+      <div class="card">
+        <h1 class="card-title">.4 findVietnamese()</h1>
+        <hr />
+        <button onclick="onFindVietnamese()">Show Vietnamese</button>
+        <ul id="findVietnamese"></ul>
+      </div>
+
+      <!-- 5 -->
+      <div class="card">
+        <h1 class="card-title">5. countGenders()</h1>
+        <hr />
+        <button onclick="onCountGenders()">Show Gender Count</button>
+        <ul id="countGenders"></ul>
+      </div>
+
+      <!-- 6 -->
+      <div class="card">
+        <h1 class="card-title">6. findTallest()</h1>
+        <hr />
+        <button onclick="onFindTallest()">Show Tallest Person</button>
+        <ul id="findTallest"></ul>
+      </div>
+
+      <!-- 7 -->
+      <div class="card">
+        <h1 class="card-title">7. findAverageHeight()</h1>
+        <hr />
+        <button onclick="onFindAverageHeight()">Show average height</button>
+        <ul id="findAverageHeight"></ul>
+      </div>
+
+      <!-- 8 -->
+      <div class="card">
+        <h1 class="card-title">8. findZodiacs()</h1>
+        <hr />
+        <button onclick="onFindZodiacs()">Show People's Zodiacs</button>
+        <ul id="findZodiacs"></ul>
+      </div>
+
+      <!-- 9 -->
+      <div class="card">
+        <h1 class="card-title">9. findAverageAge()</h1>
+        <hr />
+        <button onclick="onFindAverageAge()">Show average age</button>
+        <ul id="findAverageAge"></ul>
+      </div>
+
+      <!-- 10 -->
+      <div class="card">
+        <h1 class="card-title">10. findStudents()</h1>
+        <hr />
+        <button onclick="onFindStudents()">Show students</button>
+        <ul id="findStudents"></ul>
+      </div>
+
+      <!-- 11 -->
+      <div class="card">
+        <h1 class="card-title">11. findNguyens()</h1>
+        <hr />
+        <button onclick="onFindNguyens()">Show Nguyens</button>
+        <ul id="findNguyens"></ul>
+      </div>
+
+      <!-- 12 -->
+      <div class="card">
+        <h1 class="card-title">12. findAdults()</h1>
+        <hr />
+        <button onclick="onFindAdults()">Show adults</button>
+        <ul id="findAdults"></ul>
+      </div>
+
+      <!-- 13 -->
+      <div class="card">
+        <h1 class="card-title">13. findFavoriteColors()</h1>
+        <hr />
+        <button onclick="onFindFavoriteColors()">Show favorire colors</button>
+        <ul id="findFavoriteColors"></ul>
+      </div>
+
+      <!-- 14 -->
+      <div class="card">
+        <h1 class="card-title">14. findJobTitles()</h1>
+        <hr />
+        <button onclick="onFindJobTitles()">Show job titles</button>
+        <ul id="findJobTitles"></ul>
+      </div>
+
+      <!-- 15 -->
+      <div class="card">
+        <h1 class="card-title">15. findBirthYears()</h1>
+        <hr />
+        <button onclick="onFindBirthYears()">Show birth years</button>
+        <ul id="findBirthYears"></ul>
+      </div>
+
+      <!-- 16 -->
+      <div class="card">
+        <h1 class="card-title">16. sortOldToYoung()</h1>
+        <hr />
+        <button onclick="onSortOldToYoung()">
+          Show people from oldest to youngest
+        </button>
+        <ul id="sortOldToYoung"></ul>
+      </div>
+
+      <!-- 17 -->
+      <div class="card">
+        <h1 class="card-title">17. splitIntoMinorsAndAdults()</h1>
+        <hr />
+        <button onclick="onSplitIntoMinorsAndAdults()">
+          Split Into Minors and Adults
+        </button>
+        <dl id="splitIntoMinorsAndAdults"></dl>
+      </div>
+
+      <!-- 18 -->
+      <div class="card">
+        <h1 class="card-title">18. addFavoriteHerosToPeople()</h1>
+        <hr />
+        <button onclick="onAddFavoriteHerosToPeople()">
+          Add Favorite Heros To People
+        </button>
+        <ul id="addFavoriteHerosToPeople"></ul>
+      </div>
+
+      <!-- 19 -->
+      <div class="card">
+        <h1 class="card-title">19. addBirthPlacesToPeople()</h1>
+        <hr />
+        <button onclick="onAddBirthPlacesToPeople()">
+          Add Birth Places to People
+        </button>
+        <ul id="addBirthPlacesToPeople"></ul>
+      </div>
+
+      <!-- 20 -->
+      <div class="card">
+        <h1 class="card-title">20. findMostFavoritedColor()</h1>
+        <hr />
+        <button onclick="onFindMostFavoritedColor()">
+          Show The Most Favorited Color
+        </button>
+        <ul id="findMostFavoritedColor"></ul>
+      </div>
     </div>
 
-    <div class="card">
-      <h1 class="card-title">3. getMostPopularPerson()</h1>
-      <hr>
-      <button onclick="onGetMostPopularPerson()">Show most popular person</button>
-      <ul id="getMostPopularPerson">
-      </ul>
-    </div>
-
-  </div>
-
-  <script src="js/looping.js"></script>
-</body>
-
+    <script src="js/looping.js"></script>
+  </body>
 </html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake News</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
+            alt="google-logo"
+          />
+          GoogleNews
+        </a>
+
+        <form class="form-inline">
+          <input
+            id="search-input"
+            class="form-control"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button
+            id="search-btn"
+            class="btn btn-outline-success"
+            onclick="handleSearchClick()"
+          >
+            Search
+          </button>
+        </form>
+      </nav>
+    </header>
+
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2">
+          <nav class="navbar flex-column position-fixed sidemenu">
+            <a
+              href="#"
+              class="nav-link"
+              id="top-stories"
+              onclick="handleClickSideMenu('top-stories')"
+              >Top Stories</a
+            >
+            <a
+              href="#"
+              class="nav-link"
+              id="business"
+              onclick="handleClickSideMenu('business')"
+              >Business</a
+            >
+            <a
+              href="#"
+              class="nav-link"
+              id="technology"
+              onclick="handleClickSideMenu('technology')"
+              >Technology</a
+            >
+            <a
+              href="#"
+              class="nav-link"
+              id="entertainment"
+              onclick="handleClickSideMenu('entertainment')"
+              >Entertainment</a
+            >
+            <a
+              href="#"
+              class="nav-link"
+              id="sport"
+              onclick="handleClickSideMenu('sport')"
+              >Sport</a
+            >
+            <a
+              href="#"
+              class="nav-link"
+              id="science"
+              onclick="handleClickSideMenu('science')"
+              >Science</a
+            >
+            <a
+              href="#"
+              class="nav-link"
+              id="health"
+              onclick="handleClickSideMenu('health')"
+              >Health</a
+            >
+
+            <div class="hr-line"></div>
+
+            <div>
+              <button
+                type="button"
+                class="btn btn-outline-success m-1"
+                onclick="handleSourceClick('all')"
+              >
+                All articles
+                <span id="news-count" class="badge badge-success">2</span>
+              </button>
+            </div>
+
+            <div
+              id="source-list"
+              class="d-flex flex-wrap justify-content-between"
+            >
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                onclick='handleSourceClicked("all")'
+              >
+                Source
+                <span id="counter" class="badge badge-light">1</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                onclick='handleSourceClicked("all")'
+              >
+                Soue
+                <span id="counter" class="badge badge-light">1</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                onclick='handleSourceClicked("all")'
+              >
+                aaaaaaace
+                <span id="counter" class="badge badge-light">1</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                onclick='handleSourceClicked("all")'
+              >
+                ce
+                <span id="counter" class="badge badge-light">1</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                onclick='handleSourceClicked("all")'
+              >
+                asdsadasdas
+                <span id="counter" class="badge badge-light">1</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                onclick='handleSourceClicked("all")'
+              >
+                Source
+                <span id="counter" class="badge badge-light">1</span>
+              </button>
+            </div>
+          </nav>
+        </div>
+
+        <div class="col-lg-10">
+          <section class="container d-flex flex-column align-items-center">
+            <h3>Top Stories</h3>
+            <ul id="news-list" class="list-unstyled"></ul>
+            <button
+              class="btn btn-outline-success w-25"
+              onclick="handleLoadMoreClick()"
+            >
+              Load more
+            </button>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- <footer></footer> -->
+  </body>
+
+  <!-- Jquery, popper, bootstrap -->
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+  <!-- Our scripts -->
+  <script src="script.js"></script>
+  <!-- Moment JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</html>
