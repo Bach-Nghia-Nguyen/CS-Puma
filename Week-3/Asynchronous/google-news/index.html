@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Fake News</title>
 
     <link
@@ -16,26 +19,27 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+      <nav
+        class="navbar navbar-light bg-light justify-content-between position-fixed navbar-fixed"
+      >
+        <a class="navbar-brand">
           <img
             src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
             alt="google-logo"
           />
-          GoogleNews
+          News
         </a>
 
         <form class="form-inline">
           <input
             id="search-input"
-            class="form-control"
+            class="form-control mr-sm-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
           <button
-            id="search-btn"
-            class="btn btn-outline-success"
+            class="btn btn-outline-success my-2 my-sm-0"
             onclick="handleSearchClick()"
           >
             Search
@@ -45,9 +49,11 @@
     </header>
 
     <main class="container-fluid">
-      <div class="row">
-        <div class="col-lg-2">
-          <nav class="navbar flex-column position-fixed sidemenu">
+      <div class="row mt-2">
+        <div
+          class="col-md-3 col-lg-2 d-none d-md-block"
+        >
+          <nav class="nav flex-column"">
             <a
               href="#"
               class="nav-link"
@@ -55,6 +61,7 @@
               onclick="handleClickSideMenu('top-stories')"
               >Top Stories</a
             >
+            <div class="hr-line"></div>
             <a
               href="#"
               class="nav-link"
@@ -80,8 +87,8 @@
               href="#"
               class="nav-link"
               id="sport"
-              onclick="handleClickSideMenu('sport')"
-              >Sport</a
+              onclick="handleClickSideMenu('sports')"
+              >Sports</a
             >
             <a
               href="#"
@@ -107,85 +114,41 @@
                 onclick="handleSourceClick('all')"
               >
                 All articles
-                <span id="news-count" class="badge badge-success">2</span>
+                <span id="counter" class="badge badge-success"></span>
               </button>
             </div>
 
             <div
               id="source-list"
-              class="d-flex flex-wrap justify-content-between"
-            >
-              <button
-                type="button"
-                class="btn btn-outline-secondary"
-                onclick='handleSourceClicked("all")'
-              >
-                Source
-                <span id="counter" class="badge badge-light">1</span>
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-secondary"
-                onclick='handleSourceClicked("all")'
-              >
-                Soue
-                <span id="counter" class="badge badge-light">1</span>
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-secondary"
-                onclick='handleSourceClicked("all")'
-              >
-                aaaaaaace
-                <span id="counter" class="badge badge-light">1</span>
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-secondary"
-                onclick='handleSourceClicked("all")'
-              >
-                ce
-                <span id="counter" class="badge badge-light">1</span>
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-secondary"
-                onclick='handleSourceClicked("all")'
-              >
-                asdsadasdas
-                <span id="counter" class="badge badge-light">1</span>
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-secondary"
-                onclick='handleSourceClicked("all")'
-              >
-                Source
-                <span id="counter" class="badge badge-light">1</span>
-              </button>
-            </div>
+              class="d-flex flex-wrap align-content-around"
+            ></div>
           </nav>
         </div>
 
-        <div class="col-lg-10">
-          <section class="container d-flex flex-column align-items-center">
-            <h3>Top Stories</h3>
-            <ul id="news-list" class="list-unstyled"></ul>
-            <button
-              class="btn btn-outline-success w-25"
-              onclick="handleLoadMoreClick()"
-            >
-              Load more
-            </button>
+        <div class="col-sm-12 col-md-9 col-lg-10">
+          <section class="container">
+            <div class="row justify-content-center">
+              <div
+                class="col-md-12 col-lg-9 d-flex flex-column align-items-center"
+              >
+                <h3 id="category-title" class="text-left align-self-start"></h3>
+                <ul id="news-list" class="list-unstyled"></ul>
+                <button
+                  class="btn btn-outline-primary w-25 mb-3"
+                  onclick="handleLoadMoreClick()"
+                >
+                  Load more
+                </button>
+              </div>
+            </div>
           </section>
         </div>
       </div>
     </main>
-
-    <!-- <footer></footer> -->
   </body>
 
-  <!-- Jquery, popper, bootstrap -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery, Popper.js, Bootstrap JS -->
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
