@@ -1,0 +1,136 @@
+/*
+  Navigation style
+*/
+/* .nav-bar {
+  background-color: black;
+} */
+
+.links {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.links a,
+.links span {
+  margin: 5px;
+  color: white;
+  font-weight: 400;
+}
+
+/*
+  Main section style
+*/
+.jumbotron {
+  height: 800px;
+
+  background-color: #f037a5;
+  background: linear-gradient(#f037a5 -60%, #fae62d 140%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(-60%, #f037a5),
+    color-stop(140%, #fae62d)
+  );
+}
+
+.hero-img {
+  margin-top: -65px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://www.scdn.co/i/home/hero-burst.svg");
+}
+
+.main-content {
+  padding-top: 200px;
+  height: 500px;
+  color: white;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 82px;
+  font-weight: 800;
+}
+
+.get-spotify-button {
+  margin-top: 35px;
+  width: 300px;
+  height: 50px;
+  border-radius: 50px;
+  border: transparent;
+}
+
+/*
+  Footer style
+*/
+footer {
+  background-color: black;
+  color: white;
+  margin-top: -162px;
+}
+
+footer .upper-part,
+footer .lower-part {
+  padding: 30px 20px;
+}
+
+footer .upper-part {
+  padding-bottom: 120px;
+}
+
+.lower-part .container {
+  margin-bottom: -10px;
+}
+
+.upper-part .container,
+.lower-part .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upper-part .column h6 {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: gray;
+}
+
+.upper-part .social-logos {
+  flex-grow: 0.45;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.upper-part .social-logos .social-icon {
+  margin: 0 15px;
+  font-size: 50px;
+}
+
+.lower-part .container {
+  align-items: center;
+  height: 70px;
+}
+
+.lower-part .left {
+  margin-left: -10px;
+  display: flex;
+  width: 550px;
+  height: 60px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.lower-part .right a {
+  text-decoration: underline;
+  color: white;
+}
+
+@media only screen and (max-width: 991px) {
+  #responsive-navbar-nav span {
+    display: none;
+  }
+}
