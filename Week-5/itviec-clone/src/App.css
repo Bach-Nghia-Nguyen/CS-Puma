@@ -1,0 +1,75 @@
+.navigation {
+  background-color: #1a1818;
+}
+
+.navigation .link {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.center-this {
+  margin: 0 auto;
+}
+
+.draw-border {
+  border: 2px solid violet;
+}
+
+.job-list-item {
+  width: 800px;
+  border: 2px solid orange;
+  background-color: #fcedda;
+  margin-top: 20px;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.info-section-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag-badge {
+  margin-left: 15px;
+}
+
+.hot-job {
+  width: 100px;
+  height: 30px;
+  background-color: darkorange;
+  color: white;
+  text-align: center;
+  padding: 3px;
+}
+
+.job-detail-page {
+  background-color: #e4e4e4;
+  height: 95vh;
+  padding-top: 40px;
+}
+
+.job-detail-card {
+  border: 1px solid #cfcfcf;
+  width: 80%;
+  height: 70%x;
+  background-color: white;
+  padding: 20px 35px;
+}
+
+.basic-job-info {
+  margin-top: 15px;
+}
+
+.job-benefits,
+.job-description {
+  margin-top: 35px;
+}
+
+.apply-button {
+  width: 90%;
+}
