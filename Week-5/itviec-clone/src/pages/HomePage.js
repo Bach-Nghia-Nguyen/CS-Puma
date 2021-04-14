@@ -1,11 +1,12 @@
 import React from "react";
+import coverPhoto from "../images/tech.jpeg";
 
 // import { Link, useHistory } from "react-router-dom";
 
 const HomePage = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <img src={coverPhoto} alt="Cover" className="headline-photo" />
     </div>
   );
 };
