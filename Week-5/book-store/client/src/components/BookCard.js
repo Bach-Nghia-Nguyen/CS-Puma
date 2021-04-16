@@ -1,17 +1,9 @@
 import React from "react";
-import { Card, Button, Badge } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
-const BookCard = ({ title, cover, author, showDetail }) => {
+const BookCard = ({ title, cover, author, showDetail, removeReading }) => {
   return (
-    <Card
-      // style={{
-      //   width: "12rem",
-      //   height: "32rem",
-      //   marginBottom: "2rem",
-      // }}
-      className="book-card"
-      onClick={showDetail}
-    >
+    <Card className="book-card">
       <Card.Img variant="top" src={cover} />
       <Card.Body className="card-body">
         <div>
@@ -20,15 +12,31 @@ const BookCard = ({ title, cover, author, showDetail }) => {
           {author !== "Unknown" ? (
             <Card.Text>@{author}</Card.Text>
           ) : (
-            <Badge variant="danger" className="unknown-author">
-              Unknown author
-            </Badge>
+            <p className="unknown-author">Unknown author</p>
           )}
         </div>
 
-        <button type="button" className="btn btn-secondary">
-          See Detail
-        </button>
+        <div className="mt-3 d-flex justify-content-start book-button-group">
+          {showDetail && (
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={showDetail}
+            >
+              See Detail
+            </button>
+          )}
+
+          {removeReading && (
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={removeReading}
+            >
+              Delete from list
+            </button>
+          )}
+        </div>
       </Card.Body>
     </Card>
   );

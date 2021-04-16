@@ -3,6 +3,7 @@ import api from "../apiService";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { ScaleLoader } from "react-spinners";
+import { toast } from "react-toastify";
 
 import library_open_image from "../images/library-open.png";
 
@@ -19,32 +20,55 @@ const HomePage = () => {
   const [loading, setLoading] = useState(false);
   const [searchInputValue, setSearchInputValue] = useState("");
   const [pageNum, setPageNum] = useState(1);
+  const [totalPageNum, setTotalPageNum] = useState(1);
 
-  const totalPageNum = 10;
-  const limit = 10;
+  const limit = 8;
 
   const history = useHistory();
 
   const handleClickOnBook = (book_id) => {
     history.push(`/books/${book_id}`);
+    toast.success("Book detail is here");
+  };
+
+  const handleSearchValueChange = (e) => {
+    setSearchInputValue(e.target.value);
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
+    setKeyword(searchInputValue);
   };
 
   useEffect(() => {
     const getBookData = async () => {
       setLoading(true);
       try {
-        let url = `/books?_page=1&_limit=10`;
+        let urlForTotal = `/books`;
+        const responseForTotal = await api.get(urlForTotal);
+        const totalNumberOfBooks = responseForTotal.data.length;
+
+        if (responseForTotal.status === 200) {
+          if (totalNumberOfBooks % limit === 0) {
+            setTotalPageNum(totalNumberOfBooks / limit);
+          }
+
+          if (totalNumberOfBooks % limit !== 0) {
+            setTotalPageNum(Math.floor(totalNumberOfBooks / limit) + 1);
+          }
+
+          console.log(totalPageNum);
+          setErrorMessage("");
+        }
+
+        let url = `/books?_page=${pageNum}&_limit=${limit}`;
+        if (keyword) {
+          url += `&q=${keyword}`;
+        }
         const response = await api.get(url);
         const data = response.data;
 
         if (response.status === 200) {
-          console.log("What's in response", response);
-          console.log("What's in data", data);
-
           setBooks(data);
           setErrorMessage("");
         } else {
@@ -56,7 +80,7 @@ const HomePage = () => {
       setLoading(false);
     };
     getBookData();
-  }, []);
+  }, [keyword, pageNum, totalPageNum]);
 
   return (
     <Container>
@@ -70,8 +94,8 @@ const HomePage = () => {
 
           <SearchBar
             handleSearchSubmit={handleSearchSubmit}
-            // searchInputValue={}
-            // handleSearchValueChange={}
+            searchInputValue={searchInputValue}
+            handleSearchValueChange={handleSearchValueChange}
           />
           <hr />
           <PaginationBar
@@ -84,14 +108,16 @@ const HomePage = () => {
 
       <Row>
         {loading ? (
-          <ScaleLoader
-            color="#3F3BA7"
-            height={100}
-            width={20}
-            radius={50}
-            margin={5}
-            loading={loading}
-          />
+          <div className="loader-div d-flex flex-row justify-content-center align-items-center">
+            <ScaleLoader
+              color="#3F3BA7"
+              height={100}
+              width={20}
+              radius={50}
+              margin={5}
+              loading={loading}
+            />
+          </div>
         ) : (
           <ul className="d-flex flex-wrap justify-content-between no-bullet">
             {books ? (
@@ -101,6 +127,7 @@ const HomePage = () => {
                     title={book.title}
                     cover={`${baseURL}/${book.imageLink}`}
                     author={book.author}
+                    showDetail={() => handleClickOnBook(book.id)}
                   />
                 </li>
               ))
