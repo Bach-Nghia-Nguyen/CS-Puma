@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-const BookCard = ({ title, cover, author, showDetail, removeReading }) => {
+const BookCard = ({ title, cover, author, showDetail, removeBook }) => {
   return (
     <Card className="book-card">
       <Card.Img variant="top" src={cover} />
@@ -27,13 +27,13 @@ const BookCard = ({ title, cover, author, showDetail, removeReading }) => {
             </button>
           )}
 
-          {removeReading && (
+          {removeBook && (
             <button
               type="button"
               className="btn btn-secondary"
-              onClick={removeReading}
+              onClick={removeBook}
             >
-              Delete from list
+              Delete
             </button>
           )}
         </div>

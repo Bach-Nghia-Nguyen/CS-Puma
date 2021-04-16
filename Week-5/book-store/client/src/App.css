@@ -163,6 +163,7 @@ h1 {
 }
 
 .detail-info-section {
+  min-width: 500px;
   background-color: lightgray;
   border-radius: 50px;
   text-align: center;
@@ -174,6 +175,21 @@ h1 {
 .book-detail-title {
   font-family: "Lobster", cursive;
   font-size: 2.5rem;
+}
+
+.detail-button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.detail-button-group button {
+  font-size: 0.9rem;
+}
+
+.add-to-favorite {
+  background-color: palevioletred;
 }
 
 /* 

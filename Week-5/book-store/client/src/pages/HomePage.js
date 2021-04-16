@@ -69,8 +69,14 @@ const HomePage = () => {
         const data = response.data;
 
         if (response.status === 200) {
-          setBooks(data);
-          setErrorMessage("");
+          if (response.data.length === 0) {
+            toast.error("There is no book that matches with search");
+            setLoading(false);
+            return;
+          } else {
+            setBooks(data);
+            setErrorMessage("");
+          }
         } else {
           setErrorMessage(`FETCH ERROR (DATA): ${data.message}`);
         }

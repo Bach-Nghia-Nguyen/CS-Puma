@@ -22,11 +22,11 @@ const NavigationBar = () => {
             Reading List
           </Link>
         </div>
-        <div>
+        {/* <div>
           <Link className="link" to="/favorites">
             My favorites
           </Link>
-        </div>
+        </div> */}
       </Nav>
     </Navbar>
   );
