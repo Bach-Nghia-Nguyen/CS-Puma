@@ -29,7 +29,9 @@ const JobListItem = ({
 
         <ul>
           {benefits ? (
-            benefits.map((benefit) => <li>{benefit}</li>)
+            benefits.map((benefit) => (
+              <li key={benefits.indexOf(benefit)}>{benefit}</li>
+            ))
           ) : (
             <li>No specific benefit</li>
           )}
@@ -37,7 +39,12 @@ const JobListItem = ({
 
         {tags ? (
           tags.map((tag) => (
-            <Badge className="tag-badge" pill variant="secondary">
+            <Badge
+              key={tags.indexOf(tag)}
+              className="tag-badge"
+              pill
+              variant="secondary"
+            >
               {tag}
             </Badge>
           ))

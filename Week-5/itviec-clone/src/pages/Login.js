@@ -1,19 +1,21 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import LoginForm from "../components/LoginForm";
 
-const Login = ({ user, logout, login, error }) => {
+const Login = () => {
+  const user = useSelector((state) => state.auth.user);
   return (
     <div className="login-container">
-      {user.email !== "" ? (
+      {user ? (
         <div className="welcome">
           <h2>
             Welcome, <span>{user.name}</span>
           </h2>
-          <button onClick={logout}>Log Out</button>
+          {/* <button onClick={logout}>Log Out</button> */}
         </div>
       ) : (
-        <LoginForm login={login} error={error} />
+        <LoginForm />
       )}
     </div>
   );

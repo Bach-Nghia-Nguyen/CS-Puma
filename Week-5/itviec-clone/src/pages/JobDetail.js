@@ -1,30 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { jobActions } from "../redux/actions/job.actions";
 
 import JobDetailCard from "../components/JobDetailCard";
 
-const backEndUrl = process.env.REACT_APP_BACKEND_SERVER_URL;
+// const backEndUrl = process.env.REACT_APP_BACKEND_SERVER_URL;
 
 const JobDetail = () => {
-  const [jobDetail, setJobDetail] = useState(null);
+  const jobDetail = useSelector((state) => state.job.jobDetail);
+  const dispatch = useDispatch();
 
   const { id } = useParams();
   console.log(id);
 
   useEffect(() => {
-    const getSingleJob = async () => {
-      try {
-        let url = `${backEndUrl}/jobs/${id}`;
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log(data);
-        setJobDetail(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getSingleJob();
-  }, [id]);
+    dispatch(jobActions.getSingleJob(id));
+  }, [id, dispatch]);
 
   return (
     <div className="job-detail-page">

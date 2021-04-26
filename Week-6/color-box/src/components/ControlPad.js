@@ -1,7 +1,9 @@
-import React from "react";
-import { useDispatch } from "react-redux";
+import React, { useState } from "react";
+import { InputGroup, FormControl, Button } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 
 const ControlPad = () => {
+  const count = useSelector((state) => state.count);
   const dispatch = useDispatch();
 
   const increase = () => {
@@ -18,6 +20,18 @@ const ControlPad = () => {
     });
   };
 
+  const [userName, setUserName] = useState("");
+
+  const login = (e) => {
+    e.preventDefault();
+    dispatch({ type: "LOG_IN", payload: { userName } });
+  };
+
+  const logout = (e) => {
+    e.preventDefault();
+    dispatch({ type: "LOG_OUT" });
+  };
+
   const changeColor = (e) => {
     dispatch({
       type: "CHANGE_COLOR",
@@ -26,26 +40,37 @@ const ControlPad = () => {
   };
 
   return (
-    <figure className="control-pad">
-      <button className="btn add-button" onClick={increase}>
+    <section className="control-pad">
+      <InputGroup className="login">
+        <FormControl
+          placeholder="Username"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
+        <InputGroup.Append>
+          <Button variant="outline-success">Log in</Button>
+        </InputGroup.Append>
+      </InputGroup>
+
+      <span classNmae="user-name"></span>
+
+      <button className="btn control-button add-button" onClick={increase}>
         Add box
       </button>
-      <button className="btn remove-button" onClick={decrease}>
+      <h4>{count}</h4>
+      <button className="btn control-button remove-button" onClick={decrease}>
         Remove box
       </button>
 
       <form className="color-change-form">
-        <label htmlFor="general-change-input">Change color of all box</label>{" "}
-        <br />
         <input
           type="text"
-          id="general-change-input"
           className="form-control"
           placeholder="Change color of all box"
           onChange={changeColor}
         />
       </form>
-    </figure>
+    </section>
   );
 };
 

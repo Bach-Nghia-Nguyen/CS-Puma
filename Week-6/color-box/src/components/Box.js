@@ -7,6 +7,12 @@ const Box = ({ num }) => {
   return (
     <div style={{ backgroundColor: defaultColor }} className="color-box">
       <h3>Box: {num}</h3>
+      <input
+        type="text"
+        className="form-control"
+        placeholder="change color of this box"
+        onChange=""
+      />
     </div>
   );
 };

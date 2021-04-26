@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { Switch, Route, Redirect, useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+
+import { authActions } from "./redux/actions/auth.actions";
 
 import NavigationBar from "./components/NavigationBar";
 
@@ -20,38 +23,41 @@ function App() {
   };
   let history = useHistory();
 
-  const [user, setUser] = useState({
-    email: "",
-    name: "",
-    isAuthenticated: false,
-  });
-  const [error, setError] = useState("");
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
-  const login = (details) => {
-    console.log(details);
+  // const [user, setUser] = useState({
+  //   email: "",
+  //   name: "",
+  //   isAuthenticated: false,
+  // });
 
-    if (details.email === admin.email && details.password === admin.password) {
-      console.log("Log in successfully");
+  // const login = (details) => {
+  //   console.log(details);
 
-      setUser({
-        name: admin.name,
-        email: admin.email,
-        isAuthenticated: true,
-      });
-      setError("");
-      history.push("/jobs");
-    } else {
-      setError("Wrong username or password!");
-    }
-  };
+  //   if (details.email === admin.email && details.password === admin.password) {
+  //     console.log("Log in successfully");
 
-  const logout = () => {
-    console.log("Log out");
-    setUser({ name: "", email: "" });
-  };
+  //     setUser({
+  //       name: admin.name,
+  //       email: admin.email,
+  //       isAuthenticated: true,
+  //     });
+
+  //     history.push("/jobs");
+  //   } else {
+  //     setError("Wrong username or password!");
+  //   }
+  // };
+
+  // useDispatch(authActions.login())
+
+  // const logout = () => {
+  //   console.log("Log out");
+  //   setUser({ name: "", email: "" });
+  // };
 
   const ProtectedRoute = (props) => {
-    if (user.isAuthenticated === true) {
+    if (isAuthenticated === true) {
       return <Route {...props} />;
     } else {
       return <Redirect to="/login" />;
@@ -62,13 +68,7 @@ function App() {
     <div className="App">
       <NavigationBar />
       <Switch>
-        <Route
-          path="/login"
-          exact
-          component={() => (
-            <Login user={user} logout={logout} login={login} error={error} />
-          )}
-        />
+        <Route path="/login" exact component={() => <Login />} />
         <Route path="/about" exact component={AboutPage} />
         <Route path="/jobs" exact component={JobsList} />
 
