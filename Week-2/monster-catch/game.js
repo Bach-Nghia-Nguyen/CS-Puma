@@ -116,22 +116,21 @@ let update = function () {
     heroX += 5;
   }
 
-  // Check if player touch the canvas wall. If he does, he'll appear at the opposite wall
-  // Apply this rule to 4 sides of canvas, as if there are portals one the walls
+  // Make the 4 sides of canvas become real wall, the hero can't go out of canvas
   if (heroX >= canvas.width - 28) {
-    // player move the hero off the canvas to the right, the hero appears on the left.
+    // Right wall
     heroX = 484;
   }
   if (heroX < 0) {
-    // player move the hero off the canvas to the left, the hero appears on the right.
+    // Left wall
     heroX = 0;
   }
   if (heroY > canvas.height - 31) {
-    // player move the hero off the canvas to the bottom, the hero appears on the top.
+    // Bottom wall
     heroY = 449;
   }
   if (heroY < 0) {
-    // player mvoe the hero off the canvas to the top, the hero appears on the bottom.
+    // Top wall
     heroY = 0;
   }
 
