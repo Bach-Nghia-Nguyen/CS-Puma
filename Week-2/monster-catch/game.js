@@ -104,16 +104,16 @@ let update = function () {
   elapsedTime = Math.floor((Date.now() - startTime) / 1000);
 
   if (keysPressed["ArrowUp"]) {
-    heroY -= 5;
+    heroY -= -5;
   }
   if (keysPressed["ArrowDown"]) {
-    heroY += 5;
+    heroY += -5;
   }
   if (keysPressed["ArrowLeft"]) {
-    heroX -= 5;
+    heroX -= -5;
   }
   if (keysPressed["ArrowRight"]) {
-    heroX += 5;
+    heroX += -5;
   }
 
   // Make the 4 sides of canvas become real wall, the hero can't go out of canvas
